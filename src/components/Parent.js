@@ -19,7 +19,7 @@ const Parent = () => {
   console.log("Parent Render");
   return (
     <div>
-      <Title />
+      <Title text={"React Memoization"} />
       <Count text={"Salary"} data={salary} />
       <Button handleClick={incrementSalary}>Increment Salary</Button>
       <Count text={"Age"} data={age} />

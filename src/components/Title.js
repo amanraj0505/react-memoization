@@ -1,9 +1,9 @@
 import React from "react";
 
-const Title = () => {
+const Title = ({ text }) => {
   return (
     <div style={{ marginTop: 50, fontWeight: "bold", fontSize: 40 }}>
-      React Memoization Demo
+      {text}
     </div>
   );
 };
