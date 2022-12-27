@@ -14,7 +14,9 @@ const Parent = () => {
   }, [salary]);
   /**
    * Use Callback is used here because each time parent re-renders a new copy of
-   * incrementage and increment salary is created so as the props of the button changes it causes re-render of button.
+   * increment age and increment salary is created so as the props of the button changes it causes re-render of button.
+   * (UseCallback is used for creating memoized version of a callback function that only changes if one of its dependent variables changes)
+   * (It is also useful for passing callback functions to optimized child component that rely on refrence equality to prevent unnecessary re-render)
    */
   console.log("Parent Render");
   return (

@@ -12,12 +12,13 @@ const Parent2 = () => {
   };
   const isEven = useMemo(() => {
     let i = 0;
-    while (i < 9000000000) i++;
+    while (i < 600000000) i++;
     return count1 % 2 === 0;
   }, [count1]);
   /**
-   * Use Callback is used here because each time parent re-renders a new copy of
-   * incrementage and increment salary is created so as the props of the button changes it causes re-render of button.
+   * Same reason as useCallback hook so that the new copy of an expensive function is not created every time the component is re-rendered.
+   * so if we use useMemo only the function isEven is called while the first button is clicked and not the seconfd button is clicked.
+   * The only difference between useMemo and UseCallback is useMemo returns a value and useCallback returns a function.
    */
   return (
     <div>
