@@ -19,6 +19,9 @@ const Parent2 = () => {
    * Same reason as useCallback hook so that the new copy of an expensive function is not created every time the component is re-rendered.
    * so if we use useMemo only the function isEven is called while the first button is clicked and not the second button is clicked.
    * The only difference between useMemo and UseCallback is useMemo returns a value and useCallback returns a function.
+   *
+   * when the component re - renders as the count2 value changes so is even function is called again and hence there is delay even we click the second button,
+   * but with the use of useMemo, the fucntion will not be called again unless the value of count2 changes
    */
   return (
     <div>
