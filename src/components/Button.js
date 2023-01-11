@@ -8,4 +8,7 @@ const Button = ({ handleClick, children }) => {
     </button>
   );
 };
+/**
+ * wrap the returned component with React.memo() and the component will re-render only when the props and state associated with it changes.
+ */
 export default React.memo(Button);

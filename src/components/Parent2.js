@@ -17,7 +17,7 @@ const Parent2 = () => {
   }, [count1]);
   /**
    * Same reason as useCallback hook so that the new copy of an expensive function is not created every time the component is re-rendered.
-   * so if we use useMemo only the function isEven is called while the first button is clicked and not the seconfd button is clicked.
+   * so if we use useMemo only the function isEven is called while the first button is clicked and not the second button is clicked.
    * The only difference between useMemo and UseCallback is useMemo returns a value and useCallback returns a function.
    */
   return (

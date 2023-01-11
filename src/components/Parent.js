@@ -18,6 +18,11 @@ const Parent = () => {
    * (UseCallback is used for creating memoized version of a callback function that only changes if one of its dependent variables changes)
    * (It is also useful for passing callback functions to optimized child component that rely on refrence equality to prevent unnecessary re-render)
    */
+
+  /**
+   * why we dont want a new reference of a function to be created when the parent re-renders, because if it does then all the component in which that is passed as a
+   * props will re render.
+   */
   console.log("Parent Render");
   return (
     <div>
